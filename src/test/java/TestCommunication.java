@@ -1,5 +1,6 @@
 import communication.GameCommunication;
 import communication.loggers.ILogger;
+import communication.readers.IReader;
 import messages.IMessage;
 import org.junit.Test;
 import static org.mockito.Mockito.*;
@@ -12,7 +13,7 @@ public class TestCommunication {
     public void GameCommunication_AtCreation_LogsMessage() {
         ILogger mockLogger = mock(ILogger.class);
 
-        //GameCommunication gameCommunication = new GameCommunication(IReader input, ILogger output);
+        new GameCommunication(mockLogger);
 
         verify(mockLogger).log(any(IMessage.class));
     }
