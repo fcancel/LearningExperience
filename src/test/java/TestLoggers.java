@@ -1,6 +1,6 @@
-import loggers.ConsoleLogger;
-import loggers.ILogger;
-import loggers.LoggerBuilder;
+import communication.loggers.ConsoleLogger;
+import communication.loggers.ILogger;
+import communication.loggers.LoggerBuilder;
 import messages.IMessage;
 import org.junit.Test;
 

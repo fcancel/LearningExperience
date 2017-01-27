@@ -1,4 +1,5 @@
-import loggers.ILogger;
+import communication.GameCommunication;
+import communication.loggers.ILogger;
 import messages.IMessage;
 import org.junit.Test;
 import static org.mockito.Mockito.*;

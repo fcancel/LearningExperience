@@ -1,4 +1,4 @@
-package loggers;
+package communication.loggers;
 
 import messages.IMessage;
 

@@ -1,10 +1,14 @@
 package messages;
 
-public class MessageBuilder {
+public final class MessageBuilder {
+
+    private MessageBuilder() {
+
+    }
 
     public enum Type {
-        NORMAL{
-            public IMessage buildYourself(String initialMessage) {
+        NORMAL {
+            public IMessage buildYourself(final String initialMessage) {
                 return new NormalMessage(initialMessage);
             }
         };
@@ -12,7 +16,7 @@ public class MessageBuilder {
         public abstract IMessage buildYourself(String initialMessage);
     }
 
-    public static IMessage build(Type messageType, String message) {
+    public static IMessage build(final Type messageType, final String message) {
         return messageType.buildYourself(message);
     }
 

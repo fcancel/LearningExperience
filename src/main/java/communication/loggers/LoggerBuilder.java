@@ -1,8 +1,13 @@
-package loggers;
+package communication.loggers;
 
-public class LoggerBuilder {
+public final class LoggerBuilder {
+
+    private LoggerBuilder() {
+
+    }
+
     public enum LoggerTypes {
-        CONSOLE{
+        CONSOLE {
             public ILogger buildYourself() {
                 return new ConsoleLogger();
             }
@@ -11,7 +16,7 @@ public class LoggerBuilder {
         public abstract ILogger buildYourself();
     }
 
-    public static ILogger build(LoggerTypes loggerType) {
+    public static ILogger build(final LoggerTypes loggerType) {
         return loggerType.buildYourself();
     }
 }
